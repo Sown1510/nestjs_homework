@@ -52,18 +52,18 @@ export class ProductsService {
   }
 
   remove(id: number) {
-    console.log(id);
-    let isExist = false;
-    const result = this.products.filter(product => {
-      if(product.id == id)  isExist = true;
-      return product.id != id
-    })
-    if(isExist) {
-      this.products = result;
-      this.saveProducts();
-      return this.products;
+    const productDelete   = this.products.find(p => p.id == id)
+    const categoriesRequire = ['electronics'];
+    if(!productDelete) {
+      throw new Error('San pham khong ton tai');
     }
-    console.log(`${id} Not exist`);
+    if(categoriesRequire.includes(productDelete.category)) {
+      throw new Error(`Khong duoc xoa san pham co danh muc ${categoriesRequire.join(', ')}`);
+    }
+    this.products = this.products.filter((product) => 
+      product.id != id
+    )
+    this.saveProducts()
     return this.products;
   }
 }

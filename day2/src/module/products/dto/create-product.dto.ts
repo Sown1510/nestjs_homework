@@ -1,4 +1,4 @@
-import { IsIn, IsNotEmpty, IsNumber, IsOptional, MaxLength, Min, MinLength } from "class-validator";
+import { ArrayMaxSize, IsIn, IsNotEmpty, IsNumber, IsOptional, IsString, MaxLength, Min, MinLength } from "class-validator";
 
 export class CreateProductDto {
     @IsNotEmpty({message: 'Ten san pham khong duoc de trong'})
@@ -20,7 +20,10 @@ export class CreateProductDto {
     @IsIn(['electronics', 'furniture', 'clothing'], {message: 'Danh muc phai nam trong danh sach cho phep: electronics,furniture,clothing'})
     category: string;
 
-    
+    @IsOptional()
+    @IsString({each: true, message: 'Moi tu khoa phai la mot chuoi'})
+    @MaxLength(10, {each: true, message: 'Moi tag khong duoc qua 10 ky tu'})
+    tags: string[];
 }
 
 // - Tên sản phẩm (name) không được để trống, độ dài từ 5-50 ký tự.
