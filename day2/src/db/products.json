@@ -8,5 +8,16 @@
     "tags": [
       "fdfsfsfs"
     ]
+  },
+  {
+    "id": 1,
+    "name": "iphone 12",
+    "description": "Description for iphone 12",
+    "price": 180,
+    "category": "electronics",
+    "tags": [
+      "ip",
+      "apple"
+    ]
   }
 ]
