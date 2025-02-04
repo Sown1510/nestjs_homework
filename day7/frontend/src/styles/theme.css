@@ -1,0 +1,54 @@
+/* styles/theme.css */
+
+/* Đặt kiểu mặc định (sáng) */
+body {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --navbar-background: #333333;
+  --navbar-text: #ffffff;
+  --link-hover: #aaaaaa;
+  --tag-background: #eee;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Kiểu tối */
+body.dark {
+  --background-color: #1a1a1a;
+  --text-color: #f5f5f5;
+  --navbar-background: #444444;
+  --navbar-text: #f5f5f5;
+  --link-hover: #dddddd;
+  --tag-background: #444444;
+}
+
+/* Áp dụng cho navbar */
+.navbar {
+  background-color: var(--navbar-background);
+  color: var(--navbar-text);
+}
+
+.navbar a {
+  color: var(--navbar-text);
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--link-hover);
+}
+
+/* Nút chuyển chế độ */
+.themeToggle {
+  color: var(--navbar-text);
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  background: none;
+  transition: color 0.3s;
+}
+
+.themeToggle:hover {
+  color: var(--link-hover);
+}

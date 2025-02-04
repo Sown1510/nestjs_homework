@@ -1,0 +1,77 @@
+/* frontend/src/components/Navbar.module.css */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo {
+  flex: 1; /* Logo nằm bên trái */
+}
+
+.logo a {
+  color: white;
+}
+
+.logoImage {
+  height: 40px; /* Kích thước logo */
+  cursor: pointer;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  margin-right: 20px;
+}
+
+.navList li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navList li a:hover {
+  text-decoration: underline;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark .navbar {
+  background-color: #1c1c1c;
+}
+
+/* Light mode styles */
+body.light {
+  background-color: #fff;
+  color: #000;
+}
+
+body.light .navbar {
+  background-color: #f4f4f4;
+}

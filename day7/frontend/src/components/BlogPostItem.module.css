@@ -1,0 +1,43 @@
+.blogPostItem {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogImage {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 10px;
+}
+
+.title {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background-color: var(--tag-background);
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+.shortDescription {
+  margin-top: 10px;
+  font-size: 1em;
+}

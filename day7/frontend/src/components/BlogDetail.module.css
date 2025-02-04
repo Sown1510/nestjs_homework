@@ -1,0 +1,48 @@
+.blogDetail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.blogImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.content {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background-color: #aaaaaa;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+.backLink {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 20px;
+  color: #0070f3;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
